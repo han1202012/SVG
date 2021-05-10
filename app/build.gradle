@@ -16,7 +16,13 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        generatedDensities = ['hdpi', 'mdpi', 'xhdpi',  'xxhdpi', 'xxxhdpi']
+        // 生成 PNG 图片配置
+        //generatedDensities = ['hdpi', 'mdpi', 'xhdpi',  'xxhdpi', 'xxxhdpi']
+
+        // 使用 com.android.support:appcompat 支持库配置
+        vectorDrawables.useSupportLibrary = true
+
+
     }
 
     buildTypes {
@@ -38,7 +44,10 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
+
+    // 矢量图支持库 , 支持 5.0 以下版本手机使用矢量图 , 这个是创建应用时自带的配置
     implementation 'androidx.appcompat:appcompat:1.2.0'
+
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation 'junit:junit:4.+'
