@@ -22,7 +22,8 @@ android {
         // 使用 com.android.support:appcompat 支持库配置
         vectorDrawables.useSupportLibrary = true
 
-
+        // 国际化资源配置, 只打包默认资源与英文资源
+        resConfigs 'en'
     }
 
     buildTypes {
