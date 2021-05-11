@@ -19,5 +19,11 @@ class MainActivity : AppCompatActivity() {
 
         // 设置绿色图片
         findViewById<ImageView>(R.id.first_image).setImageDrawable(drawable)
+
+        // 动态获取图片资源 int
+        var drawable2: Int = resources.getIdentifier(
+                "ic_plane",
+                "drawable",
+                "kim.hsl.svg");
     }
 }
