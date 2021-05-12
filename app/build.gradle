@@ -27,8 +27,19 @@ android {
     }
 
     buildTypes {
+        debug {
+            // 开启资源压缩
+            //shrinkResources true
+            // 开启代码压缩
+            //minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
         release {
-            minifyEnabled false
+            // 开启资源压缩
+            shrinkResources true
+            // 开启代码压缩
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
